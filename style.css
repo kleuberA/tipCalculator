@@ -1,0 +1,334 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    align-content: center;
+    background: hsl(185, 41%, 84%);
+}
+.logo{
+    width: 100px;
+    position: fixed;
+    height: 60px;
+    top: 10vh;
+    background: url(images/logo.svg);
+    background-repeat: no-repeat;
+}
+.tipCalculator{
+    display: grid;
+    width: 60%;
+    grid-template-rows: 50vh;
+    grid-template-columns: 50% 50%;
+    height: 53vh;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border-radius: 3vh;
+}
+.containerSelectTip{
+    height: 45vh;
+    width: 100%;
+    display: inline;
+    justify-content: center;
+    padding: 0px 5vh;
+}
+.selectTip{
+    width: 90%;
+    padding: 1vh 0;
+}
+.titleSelectTip{
+    padding: 1vh 0;
+    font-size: 20px;
+    color: hsl(184, 14%, 56%);
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+}
+.containerSelectTip input::-webkit-input-placeholder {
+	text-align: left;
+    color: hsl(184, 14%, 56%);
+}
+
+#porcentagem{
+    width: 90px;
+    height: 7vh;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
+    border: none;
+    cursor: pointer;
+    background: hsl(183, 100%, 15%);
+    color: white;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+#porcentagem:hover{
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.custom{
+    width: 90px;
+    height: 7vh;
+    outline: none;
+    border: none;
+    background: hsl(189, 41%, 97%);
+    padding: 0 1vh;
+    border-radius: 1vh;
+    text-align: end;
+    font-size: 20px;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 600;
+}
+.custom:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+.labelNumberPeoples, .bill{
+    display: inline-flex;
+    padding: 1vh 0;
+    font-family: 'Space Mono', sans-serif;
+    font-size: 15px;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    width: 50%;
+}
+.valor{
+    width: 81%;
+    border: none;
+    background: url('images/icon-dollar.svg'), hsl(189, 41%, 97%);
+    height: 5vh;
+    border-radius: 1vh;
+    padding: 1vh;
+    outline: none;
+    text-align: end;
+    background-repeat: no-repeat;
+    background-position: left;
+    font-family: 'Space Mono', sans-serif;
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    font-weight: 600;
+}
+.valor:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+.numberPeoples{
+    width: 81%;
+    border: none;
+    background: url('images/icon-person.svg'), hsl(189, 41%, 97%);
+    height: 5vh;
+    border-radius: 1vh;
+    padding: 1vh;
+    outline: none;
+    text-align: end;
+    background-repeat: no-repeat;
+    background-position: left;
+    font-family: 'Space Mono', sans-serif;
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    font-weight: 600;
+}
+.numberPeoples:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.amount{
+    width: 90%;
+    background: hsl(183, 100%, 15%);
+    border-radius: 2vh;
+    padding: 3vh;
+    height: 45vh;
+}
+.reset{
+    font-size: 18px;
+    width: 100%;
+    height: 6vh;
+    border-radius: 1vh;
+    border: honeydew;
+    outline: none;
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 10vh 0;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+.reset:hover{
+    background: hsl(185, 41%, 84%);
+}
+.textTipAmount, .textTotal{
+    width: 30%;
+    font-size: 20px;
+    display: inline;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Space Mono', monospace;
+}
+.totalTip{
+    width: 50%;
+    font-size: 22px;
+    display: inline-block;
+    justify-content: end;
+    text-align: end;
+    font-family: 'Space Mono', monospace;
+    color: hsl(172, 67%, 45%);
+}
+.total{
+    width: 68%;
+    font-size: 22px;
+    display: inline-block;
+    justify-content: end;
+    text-align: end;
+    font-family: 'Space Mono', monospace;
+    color: hsl(172, 67%, 45%);
+}
+.erroMsg{
+    width: 50%;
+    font-family: 'Space Mono', sans-serif;
+    font-size: 13px;
+    display: none;
+    color: indianred;
+}
+.numberPeoplesErro {
+    border: 2px solid indianred;
+}
+.textTotalPerson, .textTipAmountPerson{
+    color: hsl(189, 41%, 97%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 1vh 0;
+}
+@media screen and (min-width: 0px) and (max-width: 765px) {
+    .tipCalculator {
+        width: 90%;
+        grid-template-rows: 50vh 40vh;
+        grid-template-columns: 90%;
+        height: 80vh;
+    }
+    .containerSelectTip {
+        height: 40vh;
+        width: 100%;
+        padding: 0;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #porcentagem {
+        width: 75px;
+        height: 5vh;
+        font-size: 18px;
+    }
+    .custom {
+        width: 75px;
+        height: 5vh;
+        padding: 0 1vh;
+        font-size: 20px;
+    }
+    .amount {
+        width: 90%;
+        padding: 1vh;
+        height: 30vh;
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .reset {
+        font-size: 18px;
+        width: 100%;
+        height: 6vh;
+        margin: 1vh 0;
+    }
+    .textTipAmount, .textTotal {
+        width: 30%;
+        font-size: 16px;
+    }
+    .totalTip {
+        width: 50%;
+        font-size: 17px;
+    }
+    .total {
+        width: 74%;
+        font-size: 18px;
+    }
+    .logo {
+        top: 1vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+    .tipCalculator {
+        grid-template-rows: 50vh;
+        grid-template-columns: 50% 50%;
+        height: 55vh;
+    }
+    .containerSelectTip {
+        padding: 0 3vh;
+    }
+    #porcentagem {
+        width: 75px;
+        height: 5vh;
+        font-size: 18px;
+    }
+    .custom {
+        width: 75px;
+        height: 5vh;
+        padding: 0 1vh;
+        font-size: 20px;
+    }
+    .amount {
+        padding: 3vh;
+        height: 42vh;
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .reset {
+        margin: 5vh 0;
+    }
+    .totalTip {
+        width: 55%;
+    }
+    .logo {
+        top: 3vh;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1250px){
+    .tipCalculator {
+        grid-template-rows: 50vh;
+        grid-template-columns: 50% 50%;
+        height: 55vh;
+    }
+    .containerSelectTip {
+        padding: 0 3vh;
+    }
+    #porcentagem {
+        width: 75px;
+        height: 5vh;
+        font-size: 18px;
+    }
+    .custom {
+        width: 75px;
+        height: 5vh;
+        padding: 0 1vh;
+        font-size: 20px;
+    }
+    .amount {
+        padding: 3vh;
+        height: 42vh;
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .reset {
+        margin: 5vh 0;
+    }
+    .totalTip {
+        width: 55%;
+    }
+    .logo {
+        top: 3vh;
+    }
+}
